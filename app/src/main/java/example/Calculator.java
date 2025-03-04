@@ -16,8 +16,10 @@ public class Calculator {
         return 10;
     }
 
-    public double divide(int a, int b) {
-        // TODO: Implement this method
-        return 5;
+    public double divide(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return (double) a / b;
     }
 }
